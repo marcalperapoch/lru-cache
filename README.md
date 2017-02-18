@@ -1,4 +1,4 @@
-# LRU Cache
+#LRU Cache
 The aim of this project is to provide an implementation of a **Last Recently Used (LRU) Cache** in which both, the `get`
 and `put` operations are O(1) in terms of time complexity.
 
