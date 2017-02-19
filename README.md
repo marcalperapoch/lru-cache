@@ -1,17 +1,24 @@
 [![Build Status](https://travis-ci.org/marcalperapoch/lru_cache.svg?branch=master)](https://travis-ci.org/marcalperapoch/lru_cache)
 #LRU Cache
-The aim of this project is to provide an implementation of a **Last Recently Used (LRU) Cache** in which both, the `get`
+The aim of this project is to provide efficient implementations of a **Last Recently Used (LRU) Cache** in which both, the `get`
 and `put` operations are O(1) in terms of time complexity.
 
 
+## Disclaimer
+This project is just for learning purposes.
 
-This LRU cache implementation uses a `Map` to be able to retrieve elements by their key in a O(1) time and also a `LinkedList`
+## Current status
+
+Right now you can find two implementations of a LRU Cache:
+
+* `LRUCache.java`
+	
+	This LRU cache implementation uses a `Map` to be able to retrieve elements by their key in a O(1) time and also a `LinkedList`
 for managing the last recent usage of the elements. The list maintains the order in which the elements are accessed;
  the last recently used element is always the first element in the list.
 
-
-## Disclaimer
-This project is just for learning purposes. A better approach to create a LRU Cache would be just
+* `NativeLRUCache.java`
+	A better approach by just
 extending the `LinkedHashMap` class overriding the `removeEldestEntry(Map.Entry<K,V> eldest)` method according to the
 current size and the wanted capacity limit.
 
