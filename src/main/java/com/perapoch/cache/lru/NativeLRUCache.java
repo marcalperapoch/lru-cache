@@ -41,7 +41,8 @@ public class NativeLRUCache<K, V> implements Cache<K, V> {
 
         private final int capacity;
 
-        private LinkedHashMapCache(int capacity) {
+        public LinkedHashMapCache(int capacity) {
+            super(capacity, 0.75f, true);
             this.capacity = capacity;
         }
 

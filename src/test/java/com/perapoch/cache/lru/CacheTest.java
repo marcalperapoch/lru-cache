@@ -77,4 +77,11 @@ public abstract class CacheTest {
         assertThat("cache still full", cache.size(), is(CAPACITY));
     }
 
+    @Test
+    public void get_shouldKeepTheElementAsTheLastRecentlyUsedEvenMaxCapacityIsReached() {
+        IntStream.rangeClosed(0, 10).forEach(num -> {
+            cache.put(num, String.valueOf(num));
+            assertThat("first element still present", cache.get(0).isPresent(), is(true));
+        });
+    }
 }
