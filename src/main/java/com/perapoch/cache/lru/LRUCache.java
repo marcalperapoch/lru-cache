@@ -13,8 +13,8 @@ import java.util.Optional;
 public class LRUCache<K, V> implements Cache<K, V> {
 
     private final int capacity;
-    private Map<K, Element<K, V>> elementsMap;
-    private LinkedList<Element<K, V>> elementsList;
+    protected Map<K, Element<K, V>> elementsMap;
+    protected LinkedList<Element<K, V>> elementsList;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
@@ -71,10 +71,10 @@ public class LRUCache<K, V> implements Cache<K, V> {
         }
     }
 
-    private static class Element<K, V> {
+    protected static class Element<K, V> {
 
-        private final K key;
-        private final V value;
+        protected final K key;
+        protected final V value;
 
         public Element(K key, V value) {
             this.key = key;
