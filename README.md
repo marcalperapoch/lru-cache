@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/marcalperapoch/lru_cache.svg?branch=master)](https://travis-ci.org/marcalperapoch/lru_cache)
+[![Build Status](https://travis-ci.org/marcalperapoch/lru-cache.svg?branch=master)](https://travis-ci.org/marcalperapoch/lru-cache)
 #LRU Cache
 The aim of this project is to provide efficient implementations of a **Last Recently Used (LRU) Cache** in which both, the `get`
 and `put` operations are O(1) in terms of time complexity.
